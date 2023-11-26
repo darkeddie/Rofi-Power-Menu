@@ -24,13 +24,6 @@ rofi_cmd() {
 	-kb-select-5 "s" \
 	-kb-select-6 "h" \
 	-theme ~/.config/rofi/config-powermenu.rasi | awk '{print $1}')
-    echo "$chosen_option"
-}
-
-# Pass variables to rofi dmenu
-run_rofi() {
-    chosen_option=$(rofi_cmd)
-    echo "$chosen_option"
 }
 
 # Execute Command
@@ -61,5 +54,5 @@ run_cmd() {
 }
 
 # Actions
-chosen_option=$(run_rofi)
+chosen_option=$(rofi_cmd)
 run_cmd "${chosen_option% *}"

@@ -61,7 +61,6 @@ prompt {
     background-color:               @background-color;
     text-color:                     @foreground;
     cursor:                         text;
-	
 }
 
 /* ---- Listview ---- */
